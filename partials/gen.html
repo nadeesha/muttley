@@ -1,0 +1,19 @@
+<form class="form-horizontal" role="form">
+    <div class="form-group row">
+        <label class="col-md-2 control-label">Class</label>
+        <div class="col-md-4">
+            <input class="form-control" placeholder="E-mail" ng-model="className" required>
+        </div>
+    </div>
+    
+     <hr>
+<h1>Hello {{className}}!</h1>
+    <div class="form-group row">
+        <div class="col-md-offset-2 col-md-10">
+            <button class="btn btn-primary" >Create</button>
+            <div class="alert alert-warning gr-top-5" >
+                <strong>Warning! </strong>Class name required.
+            </div>
+        </div>
+    </div>
+</form>

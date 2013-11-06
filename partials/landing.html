@@ -1,0 +1,39 @@
+<link href='../css/code.css' rel='stylesheet' type='text/css' />
+</header>
+<form class="form-horizontal" role="form">
+    <div class="jumbotron">
+        <h1>Create your class room</h1>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-11">
+                    <input class="form-control" ng-model="classNameval" style="height: 55px !important;font-size: 25px;" id="exampleInputEmail1" placeholder="class room">
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary">Create</button>
+                </div>
+            </div>
+            <h3>http://{{classNameval}}.com</h3>
+        </div>
+    </div>
+
+    <div ng-repeat="da in descdata">
+
+        <div class="row col-md-3">
+            <div class="thumbnail">
+
+                <section class="card">
+                    <h1>
+                        <strong>32 minutes</strong>
+                        to Consol Energy Center
+                    </h1>
+                    <h2>McKnight Road</h2>
+                </section>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</form>
