@@ -9,23 +9,39 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $http
     // enable xhr
     $httpProvider.defaults.useXDomain = true;
 
-    // xsrf config
-    $httpProvider.defaults.xsrfCookieName = 'XSRF-TOKEN';
-    $httpProvider.defaults.xsrfHeaderName = 'x-csrf-token';
-
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
         .state('home', {
             url: '/',
             templateUrl: 'partials/landing.html',
-           controller: 'landingCtrl'
+            controller: 'landingCtrl'
+        });
+
+    $stateProvider
+        .state('signup', {
+            url: '/signup',
+            templateUrl: 'partials/signup.html',
+            controller: 'SignupCtrl'
         });
 
     $stateProvider
         .state('gen', {
            url: '/gen',
            templateUrl: 'partials/gen.html'
-        });   
+        });
 
+    $stateProvider
+        .state('login', {
+            url: '/login',
+            templateUrl: 'partials/login.html',
+            controller: 'LoginCtrl'
+        });
+
+    $stateProvider
+        .state('articles', {
+            url: '/class/{classId}',
+            templateUrl: 'partials/articles.html',
+            controller: 'articlesCtrl'
+        });
 });

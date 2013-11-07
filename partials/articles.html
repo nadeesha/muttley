@@ -1,0 +1,35 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Article URL here" ng-model="url">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="add(url)">Add</button>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h1><span style="color:lightgray">class</span> {{class.name}}</h1>
+            <span class="label label-success">{{articles.length}} articles</span> <span class="label label-success">{{articles.length}} articles indexed</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-12">
+    <div ng-repeat="article in articles">
+        <div class="row col-md-4">
+            <div class="thumbnail thumbnail-ovr">
+                <section class="card">
+                    <h1 style="font-size:2rem;font-weight:200;">{{article.title}} <a href="{{article.url}}"><span class="glyphicon glyphicon-link pull"></span></a></h1>
+                    <p class="card-description">{{article.summary}}</p>
+                    <div>
+                        <span class="label gr-right-5 label-info gr-top-5" ng-repeat="k in article.keywords" style="display:inline-block;">{{k}}</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
